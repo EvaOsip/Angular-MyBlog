@@ -1,0 +1,27 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/varibles";
+
+.policy {
+  padding: 106px 0 92px 0;
+
+  .container {
+    .policy-main-title {
+      @include head-lora-38;
+      margin-bottom: 60px;
+    }
+
+    .policy-title {
+      @include head-montserrat-20;
+      margin-bottom: 40px;
+    }
+
+    .policy-info {
+      flex: 400;
+     font-size: 14px;
+      line-height: 18px;
+      color: $dark-text-color;
+      margin-bottom: 20px;
+    }
+
+  }
+}

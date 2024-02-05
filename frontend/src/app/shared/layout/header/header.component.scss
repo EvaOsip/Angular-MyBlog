@@ -1,0 +1,116 @@
+@import "../../../../assets/styles/varibles";
+
+.header {
+  padding: 40px 0 40px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 85px;
+        height: 47px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .header-menu {
+        margin-left: 100px;
+
+        nav ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 30px;
+
+          li {
+            list-style: none;
+            color: $dark-text-color;
+
+
+            a {
+              font-family: Montserrat, sans-serif;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 1;
+              cursor: pointer;
+              color: $dark-text-color;
+
+              &.active {
+                color: $blue-text-color;
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .header-phone {
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        color: $blue-text-color;
+        margin-right: 141px;
+      }
+
+      .header-action {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+
+        span {
+          margin-left: 7px;
+          font-family: Montserrat, sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1;
+          color: $dark-text-color;
+        }
+      }
+    }
+  }
+}
+
+/*980-1290*/
+@media screen and (max-width: 1300px) {
+  .header {
+    .container {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .logo {
+          margin-bottom: 20px;
+        }
+
+        .header-menu {
+          margin-left: 0;
+        }
+
+        .header-phone {
+          align-self: flex-end;
+          margin-top: 31px;
+          margin-bottom: 16px;
+          margin-right: 0;
+        }
+
+        .header-action {
+        }
+      }
+    }
+  }
+
+}

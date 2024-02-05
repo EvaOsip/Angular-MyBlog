@@ -1,0 +1,204 @@
+@import "../../../../assets/styles/varibles";
+@import "../../../../assets/styles/mixins";
+
+.blog {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+    .blog-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .blog-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .blog-applied-filters {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+
+        .blog-applied-filter {
+          border: 2px solid $blue-text-color;
+          border-radius: 5px;
+          font-size: 16px;
+          line-height: 21px;
+          color: $blue-text-color;
+          padding: 8px 20px;
+          gap: 8px;
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          margin-bottom: 20px;
+
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+          }
+        }
+      }
+
+      .blog-filters {
+        height: 45px;
+        margin-left: 30px;
+
+        .blog-filter {
+          border-radius: 5px;
+          font-size: 16px;
+
+          .blog-filter-head {
+            color: $dark-text-color;
+            width: 148px;
+            height: 45px;
+            background: transparent;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            box-sizing: border-box;
+
+            svg {
+              margin-top: 2px;
+            }
+          }
+
+          &.open .blog-filter-head {
+            border-radius: 5px 5px 0 0;
+            background-color: #B9D5FD;
+            padding: 0 23px;
+            width: 257px;
+          }
+
+          .blog-filter-body {
+            display: none;
+            border: 1px solid #B9D5FD;
+            border-radius: 0 0 5px 5px;
+            padding: 17px 23px;
+            gap: 19px;
+            flex-direction: column;
+            position: relative;
+            z-index: 3;
+            background-color: white;
+
+            .blog-filter-checkbox {
+              display: flex;
+              align-items: baseline;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 21px;
+              position: relative;
+            }
+
+          }
+
+          &.open .blog-filter-body {
+            display: flex;
+          }
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+
+
+        .blog-filter-checkbox input[type="checkbox"] {
+          display: none;
+        }
+
+        .blog-filter-checkbox span {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          color: #BEBEBE;
+        }
+
+        .blog-filter-checkbox input[type="checkbox"] + span:after {
+          content: '+';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 14px;
+          height: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #BEBEBE;
+          margin-left: 20px;
+        }
+
+        .blog-filter-checkbox input[type="checkbox"]:checked + span:after {
+          color: $dark-text-color;
+          content: '-';
+        }
+
+        .blog-filter-checkbox input[type="checkbox"]:checked + span {
+          color: $dark-text-color;
+        }
+      }
+    }
+
+    .blog-products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px 24px;
+    }
+
+
+    .pagination {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.disabled {
+          opacity: 0.5;
+        }
+      }
+
+      .pagination-pages {
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        a.pagination-page {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          width: 28px;
+          height: 46px;
+          cursor: pointer;
+          color: $dark-text-color;
+          font-size: 20px;
+          font-weight: 400;
+
+          &.active {
+            color: $blue-text-color;
+          }
+        }
+      }
+    }
+  }
+}
+

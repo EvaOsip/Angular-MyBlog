@@ -1,0 +1,243 @@
+@import "../../../../assets/styles/varibles";
+@import "../../../../assets/styles/mixins";
+
+.detail {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+
+    .detail-title {
+      @include head-montserrat-16;
+      margin-bottom: 60px;
+
+      span {
+        color: #B9D5FD;
+      }
+    }
+
+    .detail-main-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+
+      .detail-main-info-block {
+        max-width: 608px;
+
+        .detail-main-info-title {
+          margin-bottom: 40px;
+          @include head-lora-38;
+        }
+
+        .detail-main-info-description {
+          @include head-montserrat-20;
+        }
+
+      }
+
+      .detail-image {
+        width: 527px;
+        height: 320px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+      }
+    }
+
+    .detail-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .detail-info-text {
+        max-width: 818px;
+      }
+
+      .related-products {
+        display: flex;
+        flex-direction: column;
+        max-height: 60px;
+        gap: 60px;
+      }
+    }
+
+    .detail-socials {
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $blue-text-color;
+        margin-right: 20px;
+      }
+
+      a {
+        margin-right: 13px;
+      }
+    }
+
+    .detail-comments {
+      .detail-comments-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+
+      }
+
+      .detail-comments-info {
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-text-color;
+        margin-bottom: 60px;
+
+        a {
+          color: $blue-text-color;
+        }
+      }
+
+      .detail-comments-comment {
+        margin-bottom: 60px;
+
+        .detail-comments-area {
+          width: 818px;
+          height: 248px;
+          padding: 20px;
+          border-radius: 3px;
+          border: 2px solid $blue-text-color;
+          box-sizing: border-box;
+          color: $dark-text-color;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          outline: none;
+
+          &::placeholder {
+            color: #A8ABA7;
+
+          }
+        }
+
+        .button {
+          width: 422px;
+        }
+      }
+
+      .detail-comments-items {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .detail-comments-item {
+          max-width: 854px;
+
+          .detail-comments-item-head {
+            display: flex;
+            gap: 26px;
+            margin-bottom: 15px;
+
+            .detail-comments-item-image {
+              width: 60px;
+              height: 60px;
+              box-sizing: border-box;
+              border-radius: 50px;
+              border: 2px solid $blue-text-color;
+              background-color: #B9D5FD;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .detail-comments-item-info {
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 23px;
+
+              .detail-comments-item-name {
+                color: $blue-text-color;
+                margin-bottom: 10px;
+              }
+
+              .detail-comments-item-date {
+                color: #BEBEBE;
+
+
+              }
+            }
+
+
+          }
+
+          .detail-comments-item-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $dark-text-color;
+            margin-bottom: 40px;
+          }
+
+          .detail-comments-item-likes {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .likes {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+
+              button {
+                border: none;
+                background-color: transparent;
+              }
+
+              &.action {
+                span {
+                  color: $blue-text-color;
+                }
+
+                path {
+                  stroke: $blue-text-color;
+                }
+
+              }
+            }
+          }
+        }
+      }
+
+      .comments-button {
+        padding: 0;
+        margin-top: 60px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 341px;
+        height: 26px;
+        border: none;
+        background-color: transparent;
+
+        span {
+          @include head-montserrat-20;
+        }
+      }
+
+    }
+  }
+}
+
+.overlay {
+  margin-top: 40px;
+  margin-left: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+

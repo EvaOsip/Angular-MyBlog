@@ -1,0 +1,144 @@
+@import "varibles";
+@import "mixins";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+input {
+  outline: none;
+}
+
+.input {
+  width: 422px;
+  height: 53px;
+  box-sizing: border-box;
+  padding: 17px 20px;
+  border-radius: 3px;
+  border: 2px solid #709FDC;
+  font-family: Monserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $blue-text-color;
+
+  &::placeholder {
+    color: #A8ABA7;
+    font-size: 14px;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 422px;
+  height: 51px;
+  border-radius: 5px;
+  background: $blue-text-color;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+
+  &.about-button {
+    width: 163px;
+    height: 51px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+
+.carousel-control-prev-icon {
+  position: absolute;
+  top: 250px;
+  left: 5px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  z-index: 2;
+  width: 5%;
+}
+
+.carousel-control-next-icon {
+  position: absolute;
+  top: 250px;
+  right: 5px;
+}
+
+.carousel-indicators {
+  gap: 14px;
+}
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1px solid white;
+
+  &.active {
+    background: white;
+  }
+}
+
+.owl-carousel .owl-item {
+  min-height: 268px;
+}
+
+h1, h3 {
+  @include head-montserrat-20;
+}
+
+p, li {
+  font-size: 14px;
+  line-height: 18px;
+  color: #071739;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+b {
+  font-size: 14px;
+  line-height: 18px;
+  color: #071739;
+  font-weight: 500;
+}
+
+span.mat-mdc-menu-item-text {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px;
+  line-height: 18px;
+  color: #071739;
+  font-weight: 500;
+}
+
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+  stroke: $blue-text-color !important;
+}
+
+

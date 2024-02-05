@@ -1,0 +1,75 @@
+<section class="signup" [formGroup]="signupForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">
+        Регистрация на сайте
+      </div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input" autocomplete="off"
+                 [ngStyle]="{'border-color':
+         signupForm.get('name')?.invalid &&
+         (signupForm.get('name')?.dirty || signupForm.get('name')?.touched) ? 'red' : ''}"
+                 placeholder="Ваше имя и фамилия" formControlName="name">
+          <div
+            *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.touched || signupForm.get('name')?.dirty)">
+            <div class="invalid-feedback" *ngIf="signupForm.get('name')?.errors?.['required']">
+              Поле не заполнено
+            </div>
+            <div class="invalid-feedback" *ngIf="signupForm.get('name')?.errors?.['pattern']">
+              Имя и фамилия начинаются с заглавных букв, содержат только русские буквы и разделены пробелом
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color':
+         signupForm.get('email')?.invalid &&
+         (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'red' : ''}"
+                 placeholder="Электронная почта" autocomplete="off" formControlName="email">
+          <div
+            *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.touched || signupForm.get('email')?.dirty)">
+            <div class="invalid-feedback" *ngIf="signupForm.get('email')?.errors?.['required']">
+              Поле не заполнено
+            </div>
+            <div class="invalid-feedback" *ngIf="signupForm.get('email')?.errors?.['email']">
+              Электронный адрес некорректный
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input" autocomplete="new-password"
+                 [ngStyle]="{'border-color':
+         signupForm.get('password')?.invalid &&
+         (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'red' : ''}"
+                 placeholder="Пароль" formControlName="password">
+          <div
+            *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.touched || signupForm.get('password')?.dirty)">
+            <div class="invalid-feedback" *ngIf="signupForm.get('password')?.errors?.['required']">
+              Поле не заполнено
+            </div>
+            <div class="invalid-feedback" *ngIf="signupForm.get('password')?.errors?.['pattern']">
+              Пароль состоит из не менее чем 8 символов и содержит как минимум одну цифру, одну строчную и одну
+              заглавную латинскую букву
+            </div>
+          </div>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" id="agree" formControlName="agree">
+          <label for="agree">Я принимаю <a routerLink="/policy" target="_blank">условия пользовательского соглашения</a>
+            и даю <a routerLink="/policy" fragment="policy-personal-agree" target="_blank">согласие на обработку
+              персональных данных</a></label>
+        </div>
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться</button>
+      </div>
+      <div class="auth-link">
+        Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+      </div>
+    </div>
+    <div class="page-image">
+      <img src="/assets/images/auth/signup.png" alt="Hand with pencil">
+    </div>
+  </div>
+</section>

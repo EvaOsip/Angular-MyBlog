@@ -1,0 +1,64 @@
+@import "../../../../assets/styles/varibles";
+
+.article-card {
+  width: 292px;
+  height: 571px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .article-card-block {
+    .article-card-category {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 18px;
+      border-radius: 5px;
+      font-size: 11px;
+      text-align: center;
+      color: $blue-text-color;
+      background-color: white;
+    }
+
+    .article-card-image {
+      width: 291px;
+      height: 291px;
+      border-radius: 5px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 15px;
+    }
+
+    .article-card-info {
+      max-height: 224px;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      .article-card-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        margin-bottom: 20px;
+        color: $blue-text-color;
+      }
+
+      .article-card-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $dark-text-color;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .article-card-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #709FDC;
+    text-decoration: underline;
+  }
+}
